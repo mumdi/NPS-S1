@@ -1,29 +1,31 @@
-/* style.css */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: linear-gradient(135deg, #000000 , #004d00);
+    background: linear-gradient(135deg, #000000, #004d00);
     color: #333;
 }
 
+/* Header styles */
 .header {
     text-align: center;
-    
     background: linear-gradient(135deg, #004d00, #000000);
-     color: white;
+    color: white;
     padding: 20px 0;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
+/* Schedule section */
 .schedule {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 80px auto 20px; /* Adjusted for proper spacing */
     padding: 20px;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,37 +38,74 @@ body {
     color: #000000;
 }
 
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    border: 2px solid #000000
+    border: 2px solid #000000;
 }
 
 table thead {
     background-color: black;
     color: white;
-    border: 2px solid #000000
-   
 }
 
 table th, table td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd;
-    border: 2px solid #000000
-    
+    border: 2px solid #000000;
 }
 
-table tbody tr {
+table tbody tr:nth-child(odd) {
     background-color: #026e14;
     color: #ffffff;
 }
 
+table tbody tr:nth-child(even) {
+    background-color: #004d00;
+    color: #ffffff;
+}
+
+/* Footer styles */
 .footer {
     text-align: center;
     padding: 10px 0;
-   background: linear-gradient(135deg, #004d00, #000000);
+    background: linear-gradient(135deg, #004d00, #000000);
     color: white;
     font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+        font-size: 1.5rem;
+    }
+
+    .schedule {
+        margin: 80px 10px 20px;
+        padding: 15px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th, table td {
+        padding: 6px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
 }
